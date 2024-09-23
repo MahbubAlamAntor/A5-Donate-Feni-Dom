@@ -35,6 +35,8 @@ document.getElementById('donate-now-btn').addEventListener('click', function(e){
     const donateAmount = getInnerValue('donate-amount');
     const accountBalance = allBalance('account-balance');
     const myAvailableBalance = allBalance('my-available-balance');
+    //empty input value  
+    document.getElementById('donate-amount').value = "";
 
     if(isNaN(donateAmount)){
         return alert('not valid number'); 
@@ -64,8 +66,7 @@ document.getElementById('donate-now-btn').addEventListener('click', function(e){
     </div>
     `;
    historySection.insertBefore(div, historySection.firstChild);
-    //empty input value  
-   document.getElementById('donate-amount').value = "";
+   
 })
 
 // card no 2
@@ -76,6 +77,8 @@ document.getElementById('donate-now-btn1').addEventListener('click', function(e)
     const donateAmount = getInnerValue('donate-amount1');
     const accountBalance = allBalance('account-balance1');
     const myAvailableBalance = allBalance('my-available-balance');
+    // empty amount
+    document.getElementById('donate-amount1').value = "";
 
     if(isNaN(donateAmount)){
         return alert('not valid number'); 
@@ -105,8 +108,6 @@ document.getElementById('donate-now-btn1').addEventListener('click', function(e)
     </div>
     `;
     historySection.insertBefore(div, historySection.firstChild);
-    // empty amount
-    document.getElementById('donate-amount1').value = "";
 })
 
 // card no 3
@@ -117,7 +118,9 @@ document.getElementById('donate-now-btn2').addEventListener('click', function(e)
     const donateAmount = getInnerValue('donate-amount2');
     const accountBalance = allBalance('account-balance2');
     const myAvailableBalance = allBalance('my-available-balance');
-
+    // empty input value
+    document.getElementById('donate-amount2').value = "";
+    
     if(isNaN(donateAmount)){
         return alert('not valid number'); 
     }else if(myAvailableBalance < donateAmount){
@@ -145,6 +148,4 @@ document.getElementById('donate-now-btn2').addEventListener('click', function(e)
     </div>
     `;
     historySection.insertBefore(div, historySection.firstChild);
-    // empty input value
-    document.getElementById('donate-amount2').value = "";
 });
