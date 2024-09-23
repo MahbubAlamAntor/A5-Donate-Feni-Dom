@@ -61,7 +61,7 @@ document.getElementById('donate-now-btn').addEventListener('click', function(e){
     const div = document.createElement('div');
     div.innerHTML = `
     <div class="border border-borderColor2 p-5 rounded-xl">
-       <h4 class="font-bold pb-3">${donateAmount} Taka is Donated ${donateTitle}</h4>
+       <h4 class="font-bold pb-3">${donateAmount} Taka is ${donateTitle}</h4>
        <span class='text-gray-500'>Date: ${new Date()}<span>
     </div>
     `;
@@ -103,7 +103,7 @@ document.getElementById('donate-now-btn1').addEventListener('click', function(e)
     const div = document.createElement('div');
     div.innerHTML = `
     <div class="border border-borderColor2 p-5 rounded-xl">
-       <h4 class="font-bold pb-3">${donateAmount} Taka is Donated ${donateTitle}</h4>
+       <h4 class="font-bold pb-3">${donateAmount} Taka is ${donateTitle}</h4>
        <span class='text-gray-500'>Date: ${new Date()}<span>
     </div>
     `;
@@ -120,10 +120,11 @@ document.getElementById('donate-now-btn2').addEventListener('click', function(e)
     const myAvailableBalance = allBalance('my-available-balance');
     // empty input value
     document.getElementById('donate-amount2').value = "";
-    
+
     if(isNaN(donateAmount)){
         return alert('not valid number'); 
-    }else if(myAvailableBalance < donateAmount){
+    }
+    else if(myAvailableBalance < donateAmount){
         return alert('influence balance');
     }else if(donateAmount < 0){
         return alert('Your Amount Not Valid')
@@ -143,7 +144,7 @@ document.getElementById('donate-now-btn2').addEventListener('click', function(e)
     const div = document.createElement('div');
     div.innerHTML = `
     <div class="border border-borderColor2 p-5 rounded-xl">
-       <h4 class="font-bold pb-3">${donateAmount} Taka is Donated ${donateTitle}</h4>
+       <h4 class="font-bold pb-3">${donateAmount} Taka is ${donateTitle}</h4>
        <span class='text-gray-500'>Date: ${new Date()}<span>
     </div>
     `;
