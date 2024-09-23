@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind And DaisyUi CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#B4F461',
+                        bgPrimary: '#F9F7F3',
+                        bgBtn: 'rgba(17, 17, 17, 0.05)',
+                        fontPrimary: 'rgba(17, 17, 17, 0.7)',
+                        borderColor: 'rgba(17, 17, 17, 0.3)',
+                        borderColor2: 'rgba(17, 17, 17, 0.1)',
+                        inputColor: 'rgba(17, 17, 17, 0.4)',
+                        bgBtn2: 'rgba(17, 17, 17, 0.05)',
+                        footerColor: 'rgb(249, 247, 243)',
+                    },
+                    fontFamily: {
+                        bgprimary: ['rgb(249, 247, 243)'],
+                        lexend: ["Lexend"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="py-2 bg-bgPrimary">
+            <div
+                class="container mx-auto flex max-sm:flex-wrap max-sm:px-4 gap-y-4 items-center justify-between pt-6 pb-12">
+                <div>
+                    <button class="bg-primary px-8 py-3 rounded-lg text-lg font-semibold"><a href="./index.html">Home</a></button>
+                </div>
+                <div class="flex items-center gap-x-3">
+                    <img src="./assets/logo.png" alt="">
+                    <h4 class="font-semibold text-xl">Donate Bangladesh</h4>
+                </div>
+                <div class="flex gap-x-2">
+                    <img src="./assets/coin.png" alt="">
+                    <p class="text-xl">
+                        <span>5500</span>
+                        <span>BDT</span>
+                    </p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container mx-auto">
+            <h2 class="text-4xl font-bold pt-6 max-sm:p-2">Important FAQ </h2>
+            <div class="mt-6 max-sm:p-2">
+                <div tabindex="0" class="collapse collapse-arrow border-base-300 py-3 border">
+                    <div class="collapse-title text-xl font-medium">What is the document Objet Model (Dom)?</div>
+                    <div class="collapse-content">
+                        <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects, allowing programming languages like JavaScript to interact with and manipulate the content, structure, and style of a webpage dynamically.</p>
+                    </div>
+                </div>
+                <div tabindex="0" class="collapse collapse-arrow border-base-300 py-3 border">
+                    <div class="collapse-title text-xl font-medium">How do you select an element form the DOM?</div>
+                    <div class="collapse-content">
+                        <p>To select an element from the DOM (Document Object Model), JavaScript provides several methods that allow you to target specific elements in a web page. Once selected, you can manipulate these elements, such as changing their content, style, or attributes.</p>
+                    </div>
+                </div>
+                <div tabindex="0" class="collapse collapse-arrow border-base-300 py-3 border">
+                    <div class="collapse-title text-xl font-medium">What is even delegation in the context of the DOM and way is it useful?</div>
+                    <div class="collapse-content">
+                        <p>When an event (like a click) occurs on an element, it doesn't just stay on that element—it "bubbles" up through its parent elements until it reaches the top of the DOM (document). Event delegation allows you to listen for events at a parent element level and handle those events when they occur on any of its child elements.</p>
+                    </div>
+                </div>
+                <div tabindex="0" class="collapse collapse-arrow border-base-300 py-3 border">
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <p>The classList object only provide methods to change the class of an element. If you want to change other attributes like id , href , or src , you can use the setAttribute() method. The setAttribute() method accepts two arguments: The name of the attribute to set.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
