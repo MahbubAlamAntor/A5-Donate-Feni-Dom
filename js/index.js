@@ -27,7 +27,7 @@ document.getElementById('donation-btn-show').addEventListener('click', function(
 
 // card 1
 document.getElementById('donate-now-btn').addEventListener('click', function(e){
-    // incresse amount
+    // increase amount
     const donateTitle = getInnerText('donate-title');
     const donateAmount = getInnerValue('donate-amount');
     const accountBalance = allBalance('account-balance');
@@ -46,7 +46,7 @@ document.getElementById('donate-now-btn').addEventListener('click', function(e){
         document.getElementById('my_modal_5').showModal();
     }
 
-    // decrese amount
+    // decrease amount
 
     const newMyAvailableBalance = myAvailableBalance - donateAmount;
     document.getElementById('my-available-balance').innerText = newMyAvailableBalance;
@@ -61,14 +61,15 @@ document.getElementById('donate-now-btn').addEventListener('click', function(e){
     </div>
     `;
    historySection.insertBefore(div, historySection.firstChild);
+    //empty input value  
+   document.getElementById('donate-amount').value = "";
 })
-
 
 // card no 2
 
 document.getElementById('donate-now-btn1').addEventListener('click', function(e){
-    // incresse amount
-    const donateTitle = getInnerText('donate-title');
+    // increase amount
+    const donateTitle = getInnerText('donate-title1');
     const donateAmount = getInnerValue('donate-amount1');
     const accountBalance = allBalance('account-balance1');
     const myAvailableBalance = allBalance('my-available-balance');
@@ -87,7 +88,7 @@ document.getElementById('donate-now-btn1').addEventListener('click', function(e)
         document.getElementById('my_modal_51').showModal();
     }
 
-    // decrese amount
+    // decrease amount
 
     const newMyAvailableBalance = myAvailableBalance - donateAmount;
     document.getElementById('my-available-balance').innerText = newMyAvailableBalance;
@@ -101,13 +102,15 @@ document.getElementById('donate-now-btn1').addEventListener('click', function(e)
     </div>
     `;
     historySection.insertBefore(div, historySection.firstChild);
+    // empty amount
+    document.getElementById('donate-amount1').value = "";
 })
 
 // card no 3
 
 document.getElementById('donate-now-btn2').addEventListener('click', function(e){
-    // incresse amount
-    const donateTitle = getInnerText('donate-title');
+    // increase amount
+    const donateTitle = getInnerText('donate-title2');
     const donateAmount = getInnerValue('donate-amount2');
     const accountBalance = allBalance('account-balance2');
     const myAvailableBalance = allBalance('my-available-balance');
@@ -125,7 +128,7 @@ document.getElementById('donate-now-btn2').addEventListener('click', function(e)
         document.getElementById('my_modal_51').showModal();
     }
 
-    // decrese amount
+    // decrease amount
 
     const newMyAvailableBalance = myAvailableBalance - donateAmount;
     document.getElementById('my-available-balance').innerText = newMyAvailableBalance;
@@ -139,4 +142,6 @@ document.getElementById('donate-now-btn2').addEventListener('click', function(e)
     </div>
     `;
     historySection.insertBefore(div, historySection.firstChild);
-})
+    // empty input value
+    document.getElementById('donate-amount2').value = "";
+});
