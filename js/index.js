@@ -2,6 +2,7 @@ const historySection = document.getElementById('history-section');
 const donateSection = document.getElementById('donate-section');
 const donationBtnShow = document.getElementById('donation-btn-show');
 const historyBtnShow = document.getElementById('history-btn-show');
+const footerContainer = document.getElementById('footer-container');
 
 // donation and history button work
 document.getElementById('history-btn-show').addEventListener('click', function(e){
@@ -13,6 +14,8 @@ document.getElementById('history-btn-show').addEventListener('click', function(e
 
     donationBtnShow.classList.remove('bg-primary')
     donationBtnShow.classList.add('border', 'border-borderColor')
+
+    footerContainer.classList.add('hidden')
 })
 document.getElementById('donation-btn-show').addEventListener('click', function(e){
     historySection.classList.add('hidden');
