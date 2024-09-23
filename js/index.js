@@ -59,8 +59,7 @@ document.getElementById('donate-now-btn').addEventListener('click', function(e){
        <h4 class="font-bold pb-3">${donateAmount} Taka is Donated ${donateTitle}</h4>
        <span class='text-gray-500'>Date: ${new Date()}<span>
     </div>
-    `
-    // document.getElementById('history-section').appendChild(div);
+    `;
    historySection.insertBefore(div, historySection.firstChild);
 })
 
@@ -72,9 +71,7 @@ document.getElementById('donate-now-btn1').addEventListener('click', function(e)
     const donateTitle = getInnerText('donate-title');
     const donateAmount = getInnerValue('donate-amount1');
     const accountBalance = allBalance('account-balance1');
-    console.log(accountBalance.value)
     const myAvailableBalance = allBalance('my-available-balance');
-    console.log(accountBalance)
 
     if(isNaN(donateAmount)){
         return alert('not valid number'); 
@@ -95,6 +92,43 @@ document.getElementById('donate-now-btn1').addEventListener('click', function(e)
     const newMyAvailableBalance = myAvailableBalance - donateAmount;
     document.getElementById('my-available-balance').innerText = newMyAvailableBalance;
 
+    // append history
+    const div = document.createElement('div');
+    div.innerHTML = `
+    <div class="border border-borderColor2 p-5 rounded-xl">
+       <h4 class="font-bold pb-3">${donateAmount} Taka is Donated ${donateTitle}</h4>
+       <span class='text-gray-500'>Date: ${new Date()}<span>
+    </div>
+    `;
+    historySection.insertBefore(div, historySection.firstChild);
+})
+
+// card no 3
+
+document.getElementById('donate-now-btn2').addEventListener('click', function(e){
+    // incresse amount
+    const donateTitle = getInnerText('donate-title');
+    const donateAmount = getInnerValue('donate-amount2');
+    const accountBalance = allBalance('account-balance2');
+    const myAvailableBalance = allBalance('my-available-balance');
+
+    if(isNaN(donateAmount)){
+        return alert('not valid number'); 
+    }else if(myAvailableBalance < donateAmount){
+        return alert('influence balance');
+    }else if(donateAmount < 0){
+        return alert('Your Amount Not Valid')
+    }
+    else{
+        const newTotalBalance = donateAmount + accountBalance;
+        document.getElementById('account-balance2').innerText = newTotalBalance;
+        document.getElementById('my_modal_51').showModal();
+    }
+
+    // decrese amount
+
+    const newMyAvailableBalance = myAvailableBalance - donateAmount;
+    document.getElementById('my-available-balance').innerText = newMyAvailableBalance;
 
     // append history
     const div = document.createElement('div');
@@ -103,11 +137,6 @@ document.getElementById('donate-now-btn1').addEventListener('click', function(e)
        <h4 class="font-bold pb-3">${donateAmount} Taka is Donated ${donateTitle}</h4>
        <span class='text-gray-500'>Date: ${new Date()}<span>
     </div>
-    `
-    // document.getElementById('history-section').appendChild(div);
+    `;
     historySection.insertBefore(div, historySection.firstChild);
 })
-
-
-// const myBl = parseFloat(document.getElementById('account-balance1').innerText);
-// console.log(typeof myBl)
