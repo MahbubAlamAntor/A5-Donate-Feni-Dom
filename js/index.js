@@ -42,7 +42,7 @@ document.getElementById('donate-now-btn').addEventListener('click', function(e){
         return alert('not valid number'); 
     }else if(myAvailableBalance < donateAmount){
         return alert('influence balance');
-    }else if(donateAmount < 0){
+    }else if(donateAmount <= 0){
         return alert('Your Amount Not Valid')
     }
     else{
@@ -84,7 +84,7 @@ document.getElementById('donate-now-btn1').addEventListener('click', function(e)
         return alert('not valid number'); 
     }else if(myAvailableBalance < donateAmount){
         return alert('influence balance');
-    }else if(donateAmount < 0){
+    }else if(donateAmount <= 0){
         return alert('Your Amount Not Valid')
     }
     else{
@@ -126,7 +126,7 @@ document.getElementById('donate-now-btn2').addEventListener('click', function(e)
     }
     else if(myAvailableBalance < donateAmount){
         return alert('influence balance');
-    }else if(donateAmount < 0){
+    }else if(donateAmount <= 0){
         return alert('Your Amount Not Valid')
     }
     else{
